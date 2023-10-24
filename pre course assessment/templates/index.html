@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/custom.css') }}">
+<br>
+<div class="card bg-light mb-3" id="A1">
+    <div class="card-header align-items-center d-flex justify-content-center">
+        <img src="{{ url_for('static', filename='bubble-chat.png') }}" width="80" />
+        <br>
+        <h1>Quote of the Day</h1>
+    </div>
+    <div class="card-body align-items-center d-flex justify-content-center">
+        <p style="text-align:center;font-size: 22px;">{{text}}</p>
+    </div>
+</div>
+
+<div>
+    <center>Repository <a href="https://github.com/terrylimxc/nus-iss-containers-course" target="_blank">https://github.com/terrylimxc/nus-iss-containers-course</a></center>
+</div>
+
+
+<div style="font-size: 12px;position: fixed;bottom: 0;right: 0;">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+{% endblock %}
