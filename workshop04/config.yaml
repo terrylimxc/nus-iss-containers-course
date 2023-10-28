@@ -1,0 +1,30 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: minio-ns
+  labels:
+    app: minio
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: minio-cm
+  namespace: minio-ns
+  labels:
+    app: minio
+data: 
+  MINIO_ROOT_USER: user
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: minio-secret
+  namespace: minio-ns
+  labels:
+    app: minio
+type: Opaque
+data: 
+  MINIO_ROOT_PASSWORD: UEBzc3cwcmQzdjNu
